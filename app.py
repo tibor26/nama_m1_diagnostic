@@ -143,12 +143,43 @@ if "node" not in st.session_state:
 st.markdown(
     """
     <style>
+    :root {color-scheme: light !important;}
+    html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+        background-color: #ffffff !important;
+        color: #111111 !important;
+        color-scheme: light !important;
+    }
+    .stApp h1, .stApp h2, .stApp h3, .stApp p, .stApp label,
+    .stApp [data-testid="stCaptionContainer"],
+    .stApp [data-testid="stMarkdownContainer"] {
+        color: #111111 !important;
+    }
+    [data-testid="stSidebar"] {
+        background-color: #f5f7f9 !important;
+        color: #111111 !important;
+    }
+    [data-testid="stSidebar"] * {color: #111111 !important;}
+    div[data-baseweb="select"] > div {
+        background-color: #ffffff !important;
+        border-color: #8a8a8a !important;
+        color: #111111 !important;
+    }
+    div[data-baseweb="select"] span,
+    div[data-baseweb="select"] input,
+    div[role="listbox"] *,
+    div[role="option"] * {color: #111111 !important;}
+    div[role="listbox"], div[role="option"] {background-color: #ffffff !important;}
+    .stButton button {background-color: #ffffff; color: #111111;}
+    .stButton button[kind="primary"] {background-color: #ff4b4b !important; color: #ffffff !important;}
+    .stButton button[kind="primary"] * {color: #ffffff !important;}
     .block-container {max-width: 760px; padding-top: 2rem;}
-    .diagnostic-card {border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1rem 0;}
+    .diagnostic-card {border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1rem 0; color: #111111 !important;}
+    .diagnostic-card h2, .diagnostic-card h3, .diagnostic-card strong {color: #111111 !important;}
     .question {background: #e9f8ef; border-left: 7px solid #25b95b;}
     .action {background: #fff3cc; border-left: 7px solid #f5b700;}
     .resolution {background: #ffe4e4; border-left: 7px solid #e51c23;}
-    .followup {background: #ffecec; border: 1px solid #ff9c9c; border-radius: 10px; padding: 1rem; margin-top: .8rem;}
+    .followup {background: #ffecec; color: #111111 !important; border: 1px solid #ff9c9c; border-radius: 10px; padding: 1rem; margin-top: .8rem;}
+    .followup strong {color: #111111 !important;}
     </style>
     """,
     unsafe_allow_html=True,
